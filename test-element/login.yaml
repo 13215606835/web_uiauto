@@ -1,0 +1,128 @@
+#testinfo:
+#      - id: test_login001
+#        title: 登录测试
+#        info: 打开抽屉首页
+#testcase:
+#      - element_info: login-link-a
+#        find_type: ID
+#        operate_type: click
+#        info: 打开登录对话框
+#      - element_info: mobile
+#        find_type: ID
+#        operate_type: send_keys
+#        info: 输入手机号
+#      - element_info: mbpwd
+#        find_type: ID
+#        operate_type: send_keys
+#        info: 输入密码
+#      - element_info: //input[@class='keeplogin']
+#        find_type: XPATH
+#        operate_type: click
+#        info: 单击取消自动登录单选框
+#      - element_info: //span[text()='登录']
+#        find_type: XPATH
+#        operate_type: click
+#        info: 单击登录按钮
+#      - element_info: userProNick
+#        find_type: ID
+#        operate_type: perform
+#        info: 鼠标悬停账户菜单
+#      - element_info: //a[@class='logout']
+#        find_type: XPATH
+#        operate_type: click
+#        info: 选择退出
+#check:
+#      - element_info: //div[@class='box-mobilelogin']/div[1]/span
+#        find_type: XPATH
+#        info: 检查输入手机号或密码，登录异常提示
+#      - element_info: userProNick
+#        find_type: ID
+#        info: 成功登录
+#      - element_info: reg-link-a
+#        find_type: ID
+#        info: 检查退出登录是否成功
+
+
+testinfo:
+      - id: test_login001
+        title: 登录测试
+        info: 打开百度首页
+testcase:
+      - element_info: //a[@class='s-top-login-btn c-btn c-btn-primary c-btn-mini lb']
+        find_type: XPATH
+        operate_type: click
+        info: 打开登录对话框
+      - element_info: TANGRAM__PSP_11__footerULoginBtn
+        find_type: ID
+        operate_type: click
+        info: 打开用户名登录
+      - element_info: TANGRAM__PSP_11__userName
+        find_type: ID
+        operate_type: send_keys
+        info: 输入手机号
+      - element_info: TANGRAM__PSP_11__password
+        find_type: ID
+        operate_type: send_keys
+        info: 输入密码
+      - element_info: //input[@value='登录']
+        find_type: XPATH
+        operate_type: click
+        info: 单击登录按钮
+      - element_info: s-top-username
+        find_type: ID
+        operate_type: perform
+        info: 鼠标悬停账户菜单
+      - element_info: //a[@class='quit']
+        find_type: XPATH
+        operate_type: click
+        info: 打开退出二次确认
+      - element_info: //span[@class='dialog-btn-ok c-btn c-gap-right-large']
+        find_type: XPATH
+        operate_type: click
+        info: 点击退出
+
+check:
+      - element_info: //p[@id='TANGRAM__PSP_11__errorWrapper']/span[1]
+        find_type: XPATH
+        info: 检查输入手机号或密码，登录异常提示
+      - element_info: s-top-username
+        find_type: ID
+        info: 成功登录
+      - element_info: //a[@class='s-top-login-btn c-btn c-btn-primary c-btn-mini lb']
+        find_type: XPATH
+        info: 检查退出登录是否成功
+
+
+#testinfo:
+#      - id: test_login001
+#        title: 登录测试
+#        info: 打开晓黑板首页
+#testcase:
+#      - element_info: //p[@class='login-type false']
+#        find_type: XPATH
+#        operate_type: click
+#        info: 打开登录对话框
+#      - element_info: //input[@type='text']
+#        find_type: XPATH
+#        operate_type: send_keys
+#        info: 输入手机号
+#      - element_info: //input[@type='password']
+#        find_type: XPATH
+#        operate_type: send_keys
+#        info: 输入密码
+#      - element_info: //input[@value='登录']
+#        find_type: XPATH
+#        operate_type: click
+#        info: 单击登录按钮
+#      - element_info: //h1[@class='_1iQ73jfp6khwJRfKjNR66J']
+#        find_type: XPATH
+#        operate_type: click
+#        info: 单击头像
+#      - element_info: //a[@class='src-index__selected--1rgwX']
+#        find_type: XPATH
+#        operate_type: click
+#        info: 单击设置
+#      - element_info: //a[@class='src-Components-Item-item__account-item--1Q2NL']
+#        find_type: XPATH
+#        operate_type: click
+#        info: 单击设置
